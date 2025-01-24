@@ -1,0 +1,33 @@
+.button-container, .input-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.control-container{
+  display: grid;
+}
+
+.general{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.input-container{
+   
+    max-width: 80%;
+    
+}
+
+h1{
+    font-family: 'Courier New', monospace; /* Fuente de máquina de escribir */
+    text-align: center;
+}
+
+.red{
+  color: crimson;
+}
