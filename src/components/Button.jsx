@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import data from "../json/gameSentences.json";
+
+
 import "./Button.css"
 function Button({ palabra, onClick, estado }) {
     const estados = {
@@ -10,7 +10,7 @@ function Button({ palabra, onClick, estado }) {
   
     return (
       <button
-        className={`button ${estados[estado]}`}
+        className={`buttonL`}
         onClick={onClick}
       >
         {palabra}

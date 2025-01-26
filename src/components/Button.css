@@ -1,6 +1,6 @@
-.button {
+.buttonL {
     background-color: var(--color-primary);
-    color: var(--color-text);
+    color: white;
     font-family: 'Courier New', monospace; /* Fuente de máquina de escribir */
     font-size: 1.2rem;
     font-weight: 800;

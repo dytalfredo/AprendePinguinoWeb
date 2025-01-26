@@ -1,5 +1,5 @@
 ---
-
+import Game from "../components/TerminalGame.jsx";
 ---
 
 <h1 id="Pregunta">Crea una carpeta</h1>
@@ -13,13 +13,10 @@
         <div id="output" class="output"></div>
         <div class="input-line">
             <span id="prompt" class="prompt">user@electron:~$ </span>
-            <input type="text" id="input" readonly="readonly" autofocus />
+            <input type="text" id="input" autofocus />
         </div>
     </div>
-    <div id="BarraBotones" class="barraBotones">
-        <button id="cambiarTexto">Cambiar texto</button>
-        <button id="cambiarTexto">Cambiar texto</button>
-    </div>
+    <Game client:only="react" />
 </div>
 <script is:inline src="/script.js"></script>
 <script is:inline src="/cambiarTexto.js"></script>

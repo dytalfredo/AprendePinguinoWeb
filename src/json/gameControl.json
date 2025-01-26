@@ -1,0 +1,31 @@
+[
+    {
+        "type": "GameLevel",
+        "Levels": [
+            {
+                "id": 0,
+                "Enunciate":"Crea una Carpeta",
+                "Parts": ["mkdir", " NombreNuevaCarpeta"],
+                "Confirm":"mkdir NombreNuevaCarpeta"
+            },
+            {
+                "id": 1,
+                "Enunciate":"Elimina una Carpeta",
+                "Parts": ["mkdir", "<nuevoNombre>"],
+                "Confirm":"mkdir NombreNuevaCarpeta"
+            },
+            {
+                "id": 2,
+                "Enunciate":"Crea una Carpeta",
+                "Parts": ["mkdir", "<nuevoNombre>"],
+                "Confirm":"mkdir NombreNuevaCarpeta"
+            },
+            {
+                "id": 3,
+                "Enunciate":"Crea una Carpeta",
+                "Parts": ["mkdir", "<nuevoNombre>"],
+                "Confirm":"mkdir NombreNuevaCarpeta"
+            }
+        ]
+    }
+]
