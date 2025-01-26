@@ -33,8 +33,7 @@ export default function TerminalGame() {
       setParts(nowLevel.Parts.map(part=>({
         value:part
       })));
-    }
-)
+    }, [])
 
 const handleButtonClick = (value) => {
     //cambia el estado de los input cambiando el texto del input seleccionado
