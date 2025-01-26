@@ -475,6 +475,18 @@ Longitude: ${longitude}`;
 
 }); */
 
+export const executeClear = async (event) => {
+    let output = await executeCommand("clear");
+    if (output) {
+        outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div><div style="color:lime; text-align:left;">${output}</div>`;
+    } else {
+        outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div>`;
+    }
+    inputElement.value = '';
+    updatePrompt();
+    outputElement.scrollTop = outputElement.scrollHeight;
+}
+
 export const executeCommandBtn = async (event) => {
 
     let command = inputElement.value;

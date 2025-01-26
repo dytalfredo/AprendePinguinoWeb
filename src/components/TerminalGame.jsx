@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import levelsDatas from "../json/gameControl.json";
 import Button from './Button.jsx';
 import "./TerminalGame.css";
-import { executeCommandBtn } from "../../public/script.mjs"
+import { executeClear, executeCommandBtn } from "../../public/script.mjs"
 
 const input = document.getElementById("input")
 const dialog = document.getElementById("myDialog")
@@ -59,6 +59,8 @@ const confirm = () => {
     
     }else{
       dialog2.showModal();
+      executeClear()
+      clean();
         console.log("Respuesta incorrecta")
     }
 }
