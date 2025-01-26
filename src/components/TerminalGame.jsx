@@ -6,6 +6,8 @@ import "./TerminalGame.css";
 import { executeCommandBtn } from "../../public/script.mjs"
 
 const input = document.getElementById("input")
+const dialog = document.getElementById("myDialog")
+const dialog2 = document.getElementById("myDialog2")
 
 
 
@@ -51,10 +53,12 @@ const nextLevel = () =>{
 const confirm = () => {
     if (correct==input.value){
         console.log("RESPUESTA CORRECTA")
+        dialog.showModal();
         executeCommandBtn();
         nextLevel();
     
     }else{
+      dialog2.showModal();
         console.log("Respuesta incorrecta")
     }
 }

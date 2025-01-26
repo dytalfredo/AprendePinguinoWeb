@@ -14,6 +14,17 @@ const rootDirectories = {
 
 const homeDirectories = ['Documentos', 'Descargas', 'Musica', 'Imagenes', 'Videos'];
 
+function closeModal() {
+    document.getElementById('myDialog').close();
+}
+
+function closeModal2() {
+    document.getElementById('myDialog2').close();
+}
+
+document.getElementById('closeButton').addEventListener('click', closeModal);
+document.getElementById('closeButton2').addEventListener('click', closeModal2);
+
 function initializeFilesystem() {
     if (!localStorage.getItem('filesystem')) {
         const filesystem = {
