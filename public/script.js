@@ -6,6 +6,7 @@ let authenticated = false;
 let promptElement = document.getElementById('prompt');
 let outputElement = document.getElementById('output');
 let inputElement = document.getElementById('input');
+let confirmar = document.getElementById('confirmarBoton');
 
 const rootDirectories = {
     '/': ['bin', 'boot', 'dev', 'etc', 'home', 'lib', 'lib64', 'media', 'mnt', 'opt', 'proc', 'root', 'run', 'sbin', 'srv', 'sys', 'tmp', 'usr', 'var'],
@@ -448,6 +449,20 @@ ASN: ${asn}
 Latitude: ${latitude}
 Longitude: ${longitude}`;
 }
+
+/* confirmar.addEventListener('click', async function (event) {
+
+    let command = inputElement.value;
+    let output = await executeCommand(command);
+
+
+
+
+    inputElement.value = '';
+    updatePrompt();
+    outputElement.scrollTop = outputElement.scrollHeight;
+
+}); */
 
 inputElement.addEventListener('keydown', async function (event) {
     if (event.key === 'Enter') {

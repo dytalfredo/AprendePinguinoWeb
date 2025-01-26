@@ -61,7 +61,7 @@ const confirm = () => {
     if (correct==input.value){
         console.log("RESPUESTA CORRECTA")
         nextLevel();
-        clean();
+    
     }else{
         console.log("Respuesta incorrecta")
     }
@@ -84,7 +84,7 @@ const confirm = () => {
      ))}
      <div className='gameBotons'>
         <button className='buttonL' onClick={clean}> Limpiar</button>
-        <button className='buttonL' onClick={confirm}> Confirmar </button>
+        <button className='buttonL' id="confirmarBoton" onClick={confirm}> Confirmar </button>
 
      </div>
 
