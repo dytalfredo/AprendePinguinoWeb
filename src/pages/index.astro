@@ -1,26 +1,40 @@
 ---
-import Game from "../components/TerminalGame.jsx";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<header><h1>Aprende Linux Web</h1></header>
-<div class="terminal">
-    <div class="terminal-header">
-        <div class="button close"></div>
-        <div class="button minimize"></div>
-        <div class="button maximize"></div>
+<Layout title="Inicio">
+    <header><h1>Aprende Linux Web</h1></header>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div id="output" class="output"></div>
+        <div class="input-line">
+            <span id="prompt" class="prompt">user@electron:~$ </span>
+            <input type="text" id="input" autofocus />
+        </div>
     </div>
-    <div id="output" class="output"></div>
-    <div class="input-line">
-        <span id="prompt" class="prompt">user@electron:~$ </span>
-        <input type="text" id="input" autofocus />
-    </div>
-    <Game client:only="react" />
-</div>
-
-<script is:inline src="/script.mjs"></script>
-<script is:inline src="/cambiarTexto.js"></script>
+    <a href="/playgame">JUGAR</a>.
+</Layout>
+<script is:inline src="/script.js"></script>
 
 <style>
+    a {
+        text-decoration: none;
+        padding: 20px;
+        background-color: var(--color-primary);
+        color: white;
+        font-family: "Courier New", monospace; /* Fuente de máquina de escribir */
+        margin-top: 2rem;
+        font-weight: 800;
+        font-size: 2rem;
+        padding: 0.5rem 2rem;
+        border-radius: 10px;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s ease-in-out;
+    }
     body {
         background: linear-gradient(
             135deg,
@@ -34,7 +48,7 @@ import Game from "../components/TerminalGame.jsx";
         margin: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         align-items: center;
     }
 
@@ -45,8 +59,8 @@ import Game from "../components/TerminalGame.jsx";
     }
     .terminal {
         background-color: rgba(30, 30, 30, 0.7);
-
-        height: 90%;
+        width: 90%;
+        height: 60vh;
         padding: 20px;
         overflow: auto; /* Allow scrolling if content overflows */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -86,7 +100,7 @@ import Game from "../components/TerminalGame.jsx";
         -webkit-background-clip: text;
         color: transparent;
         animation: blink 1s;
-
+        text-align: center;
         text-shadow:
             0 0 10px rgba(66, 65, 65, 0.8),
             0 0 20px rgba(31, 27, 27, 0.6),

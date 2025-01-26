@@ -1,25 +1,28 @@
 ---
 import Game from "../components/TerminalGame.jsx";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<header><h1>Aprende Linux Web</h1></header>
-<div class="tablero">
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="button close"></div>
-            <div class="button minimize"></div>
-            <div class="button maximize"></div>
+<Layout title="Juego Prende Linux">
+    <header><h1>Aprende Jugando</h1></header>
+    <div class="tablero">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div id="output" class="output"></div>
+            <div class="input-line">
+                <span id="prompt" class="prompt">user@Iujo:~$ </span>
+                <input type="text" id="input" autofocus />
+            </div>
         </div>
-        <div id="output" class="output"></div>
-        <div class="input-line">
-            <span id="prompt" class="prompt">user@Iujo:~$ </span>
-            <input type="text" id="input" autofocus />
-        </div>
+        <Game client:only="react" />
     </div>
-    <Game client:only="react" />
-</div>
-<script is:inline src="/script.mjs"></script>
-<script is:inline src="/cambiarTexto.js"></script>
+    <script is:inline src="/script.mjs"></script>
+    <script is:inline src="/cambiarTexto.js"></script>
+</Layout>
 
 <style>
     body {
@@ -87,7 +90,7 @@ import Game from "../components/TerminalGame.jsx";
         -webkit-background-clip: text;
         color: transparent;
         animation: blink 1s;
-
+        text-align: center;
         text-shadow:
             0 0 10px rgba(66, 65, 65, 0.8),
             0 0 20px rgba(31, 27, 27, 0.6),
