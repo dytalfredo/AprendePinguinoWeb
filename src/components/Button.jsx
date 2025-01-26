@@ -1,7 +1,7 @@
 
 
 import "./Button.css"
-function Button({ palabra, onClick, estado }) {
+function Button({ palabra, onClick}) {
     const estados = {
       sinUsar: 'gray',
       colocado: 'green',

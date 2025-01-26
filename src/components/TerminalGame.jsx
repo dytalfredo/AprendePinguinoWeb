@@ -46,7 +46,9 @@ const clean = () => {
 }
 
 const confirm = () => {
-    
+    if (correct==input.value){
+        console.log("RESPUESTA CORRECTA")
+    }
 }
 
     return (
