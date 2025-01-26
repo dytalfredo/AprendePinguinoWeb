@@ -1,54 +1,29 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
+<h2 align="center">Supported Commands</h2>
+<ul>
+  <li><code>sudo su</code>: Access the root user.</li>
+  <li><code>sudo apt update</code>: Update the repository index.</li>
+  <li><code>sudo apt upgrade / sudo apt upgrade -y</code>: Upgrade installed packages.</li>
+  <li><code>cd &lt;directory&gt;</code>: Change the current directory.</li>
+  <li><code>ls</code>: List the contents of the current directory.</li>
+  <li><code>pwd</code>: Print the current working directory.</li>
+  <li><code>adduser &lt;username&gt;</code>: Add a new local user.</li>
+  <li><code>login &lt;username&gt;</code>: Log into an existing local user.</li>
+  <li><code>whoami</code>: Print the current username.</li>
+  <li><code>exit</code>: Exit the root user session.</li>
+  <li><code>uname -a</code>: Display the current version of the distribution.</li>
+  <li><code>ifconfig</code>: Display information about your network.</li>
+  <li><code>trace -m</code>: Get information about your own IP Address.</li>
+  <li><code>trace -t &lt;ip addr&gt;</code>: Get information about the entered IP Address.</li>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+  <li><code>mkdir &lt;directory&gt;</code>: Create a new directory.</li>
+  <li><code>rmdir &lt;directory&gt;</code>: Remove an empty directory.</li>
+  <li><code>rm &lt;file&gt;</code>: Remove a file.</li>
+  <li><code>rm -rf &lt;directory&gt;</code>: Remove a directory and its contents recursively.</li>
+  <li><code>nano &lt;filename&gt;</code>: Create or edit a file.</li>
+  <li><code>cat &lt;filename&gt;</code>: Display the content of a file.</li>
+  <li><code>gui --start </code>: Start the Desktop environment.</li>
+</ul>
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
