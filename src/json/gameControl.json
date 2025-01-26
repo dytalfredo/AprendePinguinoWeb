@@ -5,26 +5,20 @@
             {
                 "id": 0,
                 "Enunciate":"Crea una Carpeta",
-                "Parts": ["mkdir", " NombreNuevaCarpeta", "kir", "Create"],
+                "Parts": ["mkdir", "kir", "Create"," NombreNuevaCarpeta"],
                 "Confirm":"mkdir NombreNuevaCarpeta"
             },
             {
                 "id": 1,
-                "Enunciate":"Elimina una Carpeta",
-                "Parts": ["mkdir", "<nuevoNombre>"],
-                "Confirm":"mkdir NombreNuevaCarpeta"
+                "Enunciate":"Dirigete a la carpeta creada",
+                "Parts": ["go", "move", " NombreNuevaCarpeta", "cd"],
+                "Confirm":"cd NombreNuevaCarpeta"
             },
             {
                 "id": 2,
-                "Enunciate":"Crea una Carpeta",
-                "Parts": ["mkdir", "<nuevoNombre>"],
-                "Confirm":"mkdir NombreNuevaCarpeta"
-            },
-            {
-                "id": 3,
-                "Enunciate":"Crea una Carpeta",
-                "Parts": ["mkdir", "<nuevoNombre>"],
-                "Confirm":"mkdir NombreNuevaCarpeta"
+                "Enunciate":"Acceder al usuario Root",
+                "Parts": ["sudo", "pwd", " su", "root"],
+                "Confirm":"sudo su"
             }
         ]
     }

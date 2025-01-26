@@ -9,6 +9,7 @@ const input = document.getElementById("input")
 console.log(levelsDatas);
 
 export default function TerminalGame() {
+    const [level, setLevel] = useState(0);
     const [correct, setCorrect] = useState('');
     const [parts, setParts] = useState([]);
     const [enunciate, setEnunciate] = useState('');
@@ -26,9 +27,9 @@ export default function TerminalGame() {
   
     useEffect(() => {
       // Seleccionar el Level Correcto
-      const nowLevel = levelsDatas[0].Levels[0];
+      const nowLevel = levelsDatas[0].Levels[level];
       setCorrect(nowLevel.Confirm);
-      setEnunciate(nowLevel.Enunciate)
+      setEnunciate(nowLevel.Enunciate);
       setParts(nowLevel.Parts.map(part=>({
         value:part
       })));
@@ -45,9 +46,24 @@ const clean = () => {
     input.value ="";
 }
 
+const nextLevel = () =>{
+    setLevel(level+1);
+    const nowLevel = levelsDatas[0].Levels[level];
+      setCorrect(nowLevel.Confirm);
+      setEnunciate(nowLevel.Enunciate);
+      setParts(nowLevel.Parts.map(part=>({
+        value:part
+      })));
+
+}
+
 const confirm = () => {
     if (correct==input.value){
         console.log("RESPUESTA CORRECTA")
+        nextLevel();
+        clean();
+    }else{
+        console.log("Respuesta incorrecta")
     }
 }
 
