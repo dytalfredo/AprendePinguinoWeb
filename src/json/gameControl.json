@@ -5,7 +5,7 @@
             {
                 "id": 0,
                 "Enunciate":"Crea una Carpeta",
-                "Parts": ["mkdir", " NombreNuevaCarpeta"],
+                "Parts": ["mkdir", " NombreNuevaCarpeta", "kir", "Create"],
                 "Confirm":"mkdir NombreNuevaCarpeta"
             },
             {
