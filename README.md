@@ -15,10 +15,9 @@
   <li><code>ifconfig</code>: Display information about your network.</li>
   <li><code>trace -m</code>: Get information about your own IP Address.</li>
   <li><code>trace -t &lt;ip addr&gt;</code>: Get information about the entered IP Address.</li>
-</ul>
 
-<h2 align="center">v1.1.3 beta Update</h2>
-<ul>
+
+
   <li><code>mkdir &lt;directory&gt;</code>: Create a new directory.</li>
   <li><code>rmdir &lt;directory&gt;</code>: Remove an empty directory.</li>
   <li><code>rm &lt;file&gt;</code>: Remove a file.</li>
@@ -27,6 +26,4 @@
   <li><code>cat &lt;filename&gt;</code>: Display the content of a file.</li>
   <li><code>gui --start </code>: Start the Desktop environment.</li>
 </ul>
-<p><strong>Accessing or modifying root directories is prohibited.</strong></p>
-<p><strong>The GUI is under development and some features might not work!</strong></p>
-<p><strong>To exit the GUI simply refresh the webpage.</strong></p>
+
