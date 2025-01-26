@@ -3,20 +3,21 @@ import Game from "../components/TerminalGame.jsx";
 ---
 
 <header><h1>Aprende Linux Web</h1></header>
-<div class="terminal">
-    <div class="terminal-header">
-        <div class="button close"></div>
-        <div class="button minimize"></div>
-        <div class="button maximize"></div>
-    </div>
-    <div id="output" class="output"></div>
-    <div class="input-line">
-        <span id="prompt" class="prompt">user@electron:~$ </span>
-        <input type="text" id="input" autofocus />
+<div class="tablero">
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div id="output" class="output"></div>
+        <div class="input-line">
+            <span id="prompt" class="prompt">user@Iujo:~$ </span>
+            <input type="text" id="input" autofocus />
+        </div>
     </div>
     <Game client:only="react" />
 </div>
-
 <script is:inline src="/script.mjs"></script>
 <script is:inline src="/cambiarTexto.js"></script>
 
@@ -30,7 +31,7 @@ import Game from "../components/TerminalGame.jsx";
         color: lime;
         font-family: "Roboto Mono", "Courier New", Courier, monospace;
         font-weight: bold;
-        height: 100vh;
+
         margin: 0;
         display: flex;
         flex-direction: column;
