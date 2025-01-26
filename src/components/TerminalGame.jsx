@@ -71,7 +71,7 @@ const confirm = () => {
     return (
       <div>
 
-        <h1>{enunciate}</h1>
+        <h1 className='titleLevel'>{enunciate}</h1>
           <div id="BarraBotones" className="barraBotones">
           {parts.map((part, index) => (
        
