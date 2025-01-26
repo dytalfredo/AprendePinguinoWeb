@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 
 import levelsDatas from "../json/gameControl.json";
 import Button from './Button.jsx';
-import "./TerminalGame.css"
+import "./TerminalGame.css";
+import { executeCommandBtn } from "../../public/script.mjs"
 
 const input = document.getElementById("input")
 
@@ -59,6 +60,7 @@ const nextLevel = () =>{
 const confirm = () => {
     if (correct==input.value){
         console.log("RESPUESTA CORRECTA")
+        executeCommandBtn();
         nextLevel();
     
     }else{
