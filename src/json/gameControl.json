@@ -19,12 +19,6 @@
                 "Enunciate":"Acceder al usuario Root",
                 "Parts": ["sudo", "pwd", " su", "root"],
                 "Confirm":"sudo su"
-            },
-            {
-                "id": 3,
-                "Enunciate":"esto es una prueba no aceptar",
-                "Parts": ["sudo", "pwd", " su", "root"],
-                "Confirm":"sudo su"
             }
         ]
     }
