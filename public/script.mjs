@@ -63,10 +63,10 @@ function resolvePath(inputPath) {
 
 function updatePrompt() {
     if (isRoot) {
-        promptElement.textContent = `root@electron:${currentDir}# `;
+        promptElement.textContent = `root@iujo:${currentDir}# `;
         promptElement.style.color = 'red';
     } else {
-        promptElement.textContent = `${currentUser}@electron:${currentDir}$ `;
+        promptElement.textContent = `${currentUser}@iujo:${currentDir}$ `;
         promptElement.style.color = 'violet';
     }
 }
@@ -465,18 +465,18 @@ Longitude: ${longitude}`;
 }); */
 
 export const executeCommandBtn = async (event) => {
-    
-        let command = inputElement.value;
-        let output = await executeCommand(command);
-        if (output) {
-            outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div><div style="color:lime; text-align:left;">${output}</div>`;
-        } else {
-            outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div>`;
-        }
-        inputElement.value = '';
-        updatePrompt();
-        outputElement.scrollTop = outputElement.scrollHeight;
-    
+
+    let command = inputElement.value;
+    let output = await executeCommand(command);
+    if (output) {
+        outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div><div style="color:lime; text-align:left;">${output}</div>`;
+    } else {
+        outputElement.innerHTML += `<div><span style="color:${promptElement.style.color};">${promptElement.textContent}</span> ${command}</div>`;
+    }
+    inputElement.value = '';
+    updatePrompt();
+    outputElement.scrollTop = outputElement.scrollHeight;
+
 }
 
 inputElement.addEventListener('keydown', async function (event) {
