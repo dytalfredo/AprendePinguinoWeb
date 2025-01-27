@@ -31,6 +31,12 @@
                 "Enunciate":"Crea un archivo",
                 "Parts": ["nano", "NombreArchivo", "cat", "rmdir"],
                 "Confirm":"nano NombreArchivo"
+            },
+            {
+                "id": 5,
+                "Enunciate":"Muestra el contenido del archivo creado",
+                "Parts": ["NombreArchivo", "pwd", "su", "cat"],
+                "Confirm":"cat NombreArchivo"
             }
         ]
     }
