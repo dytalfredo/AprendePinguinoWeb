@@ -37,6 +37,49 @@
                 "Enunciate":"Eliminar un directorio y su contenido recursivamente ",
                 "Parts": [" NombreNuevaCarpeta", "rm -rf", "remove", " directory"],
                 "Confirm":"rm -rf NombreNuevaCarpeta"
+            },
+            {
+                "id": 15,
+                "Enunciate":"Cierra la sesión del usuario Root",
+                "Parts": ["rm", "user", "exit"," NombreUsuario"],
+                "Confirm":"exit"
+            },
+            {
+                "id": 16,
+                "Enunciate":"Añade un nuevo usuario",
+                "Parts": ["sudo", " NombreUsuario", " NombreNuevoUsuario", " adduser"],
+                "Confirm":"sudo adduser NombreNuevoUsuario"
+            },
+            {
+                "id": 17,
+                "Enunciate":"Muestra la información de Red",
+                "Parts": ["sudo", "ifconfig", "su", "root"],
+                "Confirm":"ifconfig"
+            }, 
+            {
+                "id": 18,
+                "Enunciate":"Muestra la información de tu IP",
+                "Parts": [" -m", "trace", " -t", " NumerosDirecciónIP"],
+                "Confirm":"trace -m"
+            },
+            {
+                "id": 19,
+                "Enunciate":"Muestra la información de una IP",
+                "Parts": [" -m", "trace", " -t", " NumerosDirecciónIP"],
+                "Confirm":"trace -t NumerosDirecciónIP"
+            },
+            {
+                "id": 20,
+                "Enunciate":"Inicia el Escritorio",
+                "Parts": ["gui", "pwd", " -start", " su"],
+                "Confirm":"gui -start"
+            },
+            { 
+                "id": 21,
+                "Enunciate":"Muestra qué tiene la carpeta actual",
+                "Parts": ["ls", "mkdir", "rmdir", "cd"],
+                "Confirm":"ls"
             }
 ] }
         ]
+        
