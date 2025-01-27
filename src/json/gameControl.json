@@ -19,7 +19,13 @@
                 "Enunciate":"Acceder al usuario Root",
                 "Parts": ["sudo", "pwd", " su", "root"],
                 "Confirm":"sudo su"
-            }
+            }, 
+            {
+                "id": 3,
+                "Enunciate":"El enunciado que tu quieras",
+                "Parts": ["Aquí las palabras que comprenden la línea de comando de tu enunciado", "pwd", " su", "root"],
+                "Confirm":"La línea de comando correcta"
+            } 
         ]
     }
 ]
