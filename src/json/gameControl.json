@@ -22,18 +22,12 @@
             }, 
             {
                 "id": 3,
-                "Enunciate":"El enunciado que tu quieras",
-                "Parts": ["Aquí las palabras que comprenden la línea de comando de tu enunciado", "pwd", " su", "root"],
-                "Confirm":"La línea de comando correcta"
-            },
-            {
-                "id": 4,
                 "Enunciate":"Crea un archivo",
                 "Parts": ["nano", "NombreArchivo", "cat", "rmdir"],
                 "Confirm":"nano NombreArchivo"
             },
             {
-                "id": 5,
+                "id": 4,
                 "Enunciate":"Muestra el contenido del archivo creado",
                 "Parts": ["NombreArchivo", "pwd", "su", "cat"],
                 "Confirm":"cat NombreArchivo"
