@@ -31,7 +31,20 @@
                 "Enunciate":"Muestra el contenido del archivo creado",
                 "Parts": [" NombreArchivo", "pwd", "su", "cat"],
                 "Confirm":"cat NombreArchivo"
-            }
+            },
+            {
+                "id": 5,
+                "Enunciate":"Eliminar un archivo",
+                "Parts": [" NombreArchivo", "rm", "remove", "file"],
+                "Confirm":"rm file"
+            },
+            { 
+                "id": 6,
+                "Enunciate":"Eliminar un directorio y su contenido recursivamente ",
+                "Parts": [" NombreDirectorio", "rm -rf", "remove", "directory"],
+                "Confirm":"rm -rf directory"
+            
+            
         ]
     }
 ]
