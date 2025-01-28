@@ -38,16 +38,11 @@
                 "Parts": [" NombreNuevaCarpeta", "rm -rf", "remove", " directory"],
                 "Confirm":"rm -rf NombreNuevaCarpeta"
             },
-            {
-                "id": 15,
-                "Enunciate":"Cierra la sesión del usuario Root",
-                "Parts": ["rm", "user", "exit"," NombreUsuario"],
-                "Confirm":"exit"
-            },
+        
             {
                 "id": 16,
                 "Enunciate":"Añade un nuevo usuario",
-                "Parts": ["sudo", " NombreUsuario", " NombreNuevoUsuario", " adduser"],
+                "Parts": ["sudo", " cat", " NombreNuevoUsuario", " adduser","lol"],
                 "Confirm":"sudo adduser NombreNuevoUsuario"
             },
             {
