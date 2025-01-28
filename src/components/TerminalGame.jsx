@@ -29,6 +29,7 @@ export default function TerminalGame() {
       height: undefined,
     });
     const [ timePoints, seconds ] = useTimePoints(0.001);
+    const [mensajeTexto, setMensajeTexto] = useState('');
     
     const calculatePoints = () => {
       return Math.floor(timePoints * lives);
@@ -84,8 +85,8 @@ const handleClose = () => {
 const gameWins = ()=>{
  setIsWins(true);
  setMensajeDialog(`Felicitaciones has ganado. 
-  Puntuación : ${calculatePoints()}
-  Tiempo transcurrido : ${seconds}s`);
+  Puntuación : ${calculatePoints()}`);
+   setMensajeTexto((`Tiempo transcurrido : ${seconds}s`))
 }
 
 const gameOver = ()=>{
@@ -175,6 +176,11 @@ const confirm = () => {
         {isOpen && (
           <dialog open className={isGameOver? 'pantallaFinal':'pantallaFinal2'}>  
           <h2>¡{mensajeDialog}!</h2>
+          {
+            isWins &&(
+              <span>{mensajeTexto}</span>
+            )
+          }
           <button className={isGameOver ? ' buttonL derrota' : ' buttonL victoria'} onClick={handleClose}>Cerrar</button>
         </dialog>
         
