@@ -5,6 +5,7 @@ import Button from './Button.jsx';
 import "./TerminalGame.css";
 import { executeClear, executeCommandBtn } from "../../public/script.mjs"
 import Confetti from 'react-confetti';
+import { useTimePoints } from './hooks/useTimePoints.jsx'; 
 
 const input = document.getElementById("input")
 const dialog = document.getElementById("myDialog")
@@ -27,8 +28,20 @@ export default function TerminalGame() {
       width: undefined,
       height: undefined,
     });
-  
-  
+    const [ timePoints, seconds ] = useTimePoints(0.001);
+    
+    const calculatePoints = () => {
+      return Math.floor(timePoints * lives);
+    }
+
+    useEffect(() => {
+     
+      if(Math.floor(timePoints) === 0){
+        gameOver();
+        setIsOpen(true);
+      }
+    }, [timePoints])
+    
   
     useEffect(() => {
       // Seleccionar el Level Correcto
@@ -70,7 +83,9 @@ const handleClose = () => {
 
 const gameWins = ()=>{
  setIsWins(true);
- setMensajeDialog("Felicitaciones has ganado")
+ setMensajeDialog(`Felicitaciones has ganado. 
+  Puntuación : ${calculatePoints()}
+  Tiempo transcurrido : ${seconds}s`);
 }
 
 const gameOver = ()=>{
@@ -137,7 +152,10 @@ const confirm = () => {
         )
 
         }
-<h2 className='lives'>Vidas restante: {lives}</h2>
+        <h2 className='timer'>
+          <span className={timePoints < 200 ? "parpadeo" : ""}> Tiempo: {seconds}</span>
+        </h2>
+        <h2 className='lives'>Vidas restante: {lives}</h2>
         <h1 className='titleLevel'>{enunciate}</h1>
           <div id="BarraBotones" className="barraBotones">
           {parts.map((part, index) => (

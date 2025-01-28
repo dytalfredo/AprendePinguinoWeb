@@ -30,6 +30,14 @@ font-size: 0.5rem;
     text-align: center;
     font-size: medium;
     color: #ff5f56;
+    margin-top: 0;
+  }
+
+  .timer {
+    text-align: center;
+    color: #ff5f56;
+    font-size: 1.76rem;
+    margin: 20px 0 0 0;
   }
 
   .pantallaFinal2
@@ -69,6 +77,23 @@ font-size: 0.5rem;
     font-size: 2rem;
   }
 
+
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .parpadeo {
+    animation: parpadeo 1s infinite;
+  }
+  
   
 
 
