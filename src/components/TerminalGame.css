@@ -15,6 +15,57 @@ font-size: 0.5rem;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.pantallaFinal
+  {
+    position: absolute;
+    top: 200px;
+    font-size: large;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+ 
+  }
+
+  .pantallaFinal2
+  {
+    position: absolute;
+    font-size: x-large;
+    top: 200px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 100px;
+ 
+  }
+  .victoria{
+    text-align: center;
+    margin-top: 30px;
+    color: lime;
+    font-size: 2rem;
+    animation: bounce 1s infinite;
+
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .derrota{
+    color: red;
+    font-size: 2rem;
+  }
+
+  
+
 
 @media (min-width: 768px) {
   .gameBotons {

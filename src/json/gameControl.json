@@ -16,33 +16,27 @@
             },
             {
                 "id": 2,
-                "Enunciate":"Acceder al usuario Root",
-                "Parts": ["sudo", "pwd", " su", "root"],
-                "Confirm":"sudo su"
-            }, 
-            {
-                "id": 3,
                 "Enunciate":"Crea un archivo",
                 "Parts": ["nano", " NombreArchivo", " cat", "rmdir"],
                 "Confirm":"nano NombreArchivo"
             },
             {
-                "id": 4,
+                "id": 3,
                 "Enunciate":"Muestra el contenido del archivo creado",
                 "Parts": [" NombreArchivo", "pwd", "su", "cat"],
                 "Confirm":"cat NombreArchivo"
             },
             {
-                "id": 5,
+                "id": 4,
                 "Enunciate":"Eliminar un archivo",
-                "Parts": [" NombreArchivo", "rm", "remove", "file"],
-                "Confirm":"rm file"
+                "Parts": [" NombreArchivo", "rm", "remove", " file"],
+                "Confirm":"rm NombreArchivo"
             },
             { 
-                "id": 6,
+                "id": 5,
                 "Enunciate":"Eliminar un directorio y su contenido recursivamente ",
-                "Parts": [" NombreDirectorio", "rm -rf", "remove", "directory"],
-                "Confirm":"rm -rf directory"
+                "Parts": [" NombreNuevaCarpeta", "rm -rf", "remove", " directory"],
+                "Confirm":"rm -rf NombreNuevaCarpeta"
             }
 ] }
         ]
