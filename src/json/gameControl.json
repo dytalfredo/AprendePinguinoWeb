@@ -43,7 +43,6 @@
                 "Enunciate":"Eliminar un directorio y su contenido recursivamente ",
                 "Parts": [" NombreDirectorio", "rm -rf", "remove", "directory"],
                 "Confirm":"rm -rf directory"
-            
-            
-    }
-]
+            }
+] }
+        ]
