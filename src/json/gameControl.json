@@ -29,7 +29,7 @@
             {
                 "id": 4,
                 "Enunciate":"Eliminar un archivo",
-                "Parts": [" NombreArchivo", "rm", "remove", " file"],
+                "Parts": [" NombreArchivo", "remove",  " file","rm", "nes"],
                 "Confirm":"rm NombreArchivo"
             },
             { 

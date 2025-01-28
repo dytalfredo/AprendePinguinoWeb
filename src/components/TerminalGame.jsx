@@ -23,12 +23,24 @@ export default function TerminalGame() {
     const [isWins, setIsWins]= useState(false);
     const [lives, setLives]= useState(2);
     const [mensajeDialog, setMensajeDialog ] = useState('');
-   
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
   
   
   
     useEffect(() => {
       // Seleccionar el Level Correcto
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener('resize', handleResize);
+    handleResize();
+    
       const nowLevel = levelsDatas[0].Levels[level];
       setCorrect(nowLevel.Confirm);
       setEnunciate(nowLevel.Enunciate);
@@ -38,7 +50,7 @@ export default function TerminalGame() {
       setIsOpen(false);
 setIsWins(false);
 setIsGameOver(false);
-      
+return () => window.removeEventListener('resize', handleResize);    
     }, [level])
 
 const handleButtonClick = (value) => {
@@ -119,8 +131,8 @@ const confirm = () => {
       <div>
         {isWins &&(
           <Confetti
-      width={1900}
-      height={600}
+      width={windowSize.width}
+      height={windowSize.height}
     />
         )
 
