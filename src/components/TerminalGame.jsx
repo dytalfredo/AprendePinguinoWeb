@@ -125,7 +125,7 @@ const confirm = () => {
         )
 
         }
-
+<h2 className='lives'>Vidas restante: {lives}</h2>
         <h1 className='titleLevel'>{enunciate}</h1>
           <div id="BarraBotones" className="barraBotones">
           {parts.map((part, index) => (
@@ -141,7 +141,7 @@ const confirm = () => {
      <div className='gameBotons'>
         <button className='buttonL' onClick={clean}> Limpiar</button>
         <button className='buttonL' id="confirmarBoton" onClick={confirm}> Confirmar </button>
-        <h2>Vidas restante: {lives}</h2>
+        
         {isOpen && (
           <dialog open className={isGameOver? 'pantallaFinal':'pantallaFinal2'}>  
           <h2>¡{mensajeDialog}!</h2>
