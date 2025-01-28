@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export function useTimePoints(decayConstant) {
-    const [points, setPoints] = useState(100000); 
+    const [points, setPoints] = useState(200000); 
     const [second, setSecond] = useState(0); 
     
     useEffect(() => {
